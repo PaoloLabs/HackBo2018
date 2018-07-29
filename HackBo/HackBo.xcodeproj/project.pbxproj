@@ -13,6 +13,8 @@
 		52ACBDC6210DCD26009D1434 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACBDC5210DCD26009D1434 /* OverviewViewController.swift */; };
 		52ACBDC9210DED91009D1434 /* FieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACBDC7210DED91009D1434 /* FieldTableViewCell.swift */; };
 		52ACBDCA210DED91009D1434 /* FieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52ACBDC8210DED91009D1434 /* FieldTableViewCell.xib */; };
+		52ACBDCC210DF27C009D1434 /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACBDCB210DF27C009D1434 /* JsonData.swift */; };
+		52ACBDCE210DF305009D1434 /* EstadisticasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACBDCD210DF305009D1434 /* EstadisticasViewController.swift */; };
 		52B441A2210D3503002F6779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B441A1210D3503002F6779 /* AppDelegate.swift */; };
 		52B441A4210D3503002F6779 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B441A3210D3503002F6779 /* ViewController.swift */; };
 		52B441A7210D3503002F6779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B441A5210D3503002F6779 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		52ACBDC5210DCD26009D1434 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		52ACBDC7210DED91009D1434 /* FieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTableViewCell.swift; sourceTree = "<group>"; };
 		52ACBDC8210DED91009D1434 /* FieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FieldTableViewCell.xib; sourceTree = "<group>"; };
+		52ACBDCB210DF27C009D1434 /* JsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
+		52ACBDCD210DF305009D1434 /* EstadisticasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstadisticasViewController.swift; sourceTree = "<group>"; };
 		52B4419E210D3503002F6779 /* HackBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B441A1210D3503002F6779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B441A3210D3503002F6779 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,8 +127,10 @@
 				5253FF88210D870A0042977A /* HackBo.entitlements */,
 				52B441A1210D3503002F6779 /* AppDelegate.swift */,
 				52B441A3210D3503002F6779 /* ViewController.swift */,
+				52ACBDCB210DF27C009D1434 /* JsonData.swift */,
 				52ACBDC1210DA6BE009D1434 /* Services.swift */,
 				52B441A5210D3503002F6779 /* Main.storyboard */,
+				52ACBDCD210DF305009D1434 /* EstadisticasViewController.swift */,
 				52ACBDC3210DC908009D1434 /* TabBarViewController.swift */,
 				52B441A8210D3504002F6779 /* Assets.xcassets */,
 				52ACBDC5210DCD26009D1434 /* OverviewViewController.swift */,
@@ -389,10 +395,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				52ACBDC4210DC908009D1434 /* TabBarViewController.swift in Sources */,
+				52ACBDCC210DF27C009D1434 /* JsonData.swift in Sources */,
 				52B441A4210D3503002F6779 /* ViewController.swift in Sources */,
 				52ACBDC9210DED91009D1434 /* FieldTableViewCell.swift in Sources */,
 				52ACBDC6210DCD26009D1434 /* OverviewViewController.swift in Sources */,
 				52ACBDC2210DA6BE009D1434 /* Services.swift in Sources */,
+				52ACBDCE210DF305009D1434 /* EstadisticasViewController.swift in Sources */,
 				52B441A2210D3503002F6779 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

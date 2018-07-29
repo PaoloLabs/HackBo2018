@@ -164,7 +164,7 @@
         <!--Estadisticas-->
         <scene sceneID="9a9-cH-C1J">
             <objects>
-                <viewController id="ZQx-1o-ypN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EstadisticasViewController" id="ZQx-1o-ypN" customClass="EstadisticasViewController" customModule="HackBo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B8R-uN-D14">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
