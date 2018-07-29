@@ -107,8 +107,10 @@ extension NotificacionesViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = self.arrayNotification[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotTableViewCell") as! NotTableViewCell
-        cell.titleLbl.text = item["servicio"].stringValue
-        cell.subTitle.text = item["descripcion"].stringValue
+        cell.servicio.text = item["servicio"].stringValue
+        cell.beneficios.text = item["beneficios"][0].stringValue
+        cell.requerimientos.text = "\(item["requerimientos"][0].stringValue) \n\(item["requerimientos"][1].stringValue) \n\(item["requerimientos"][2].stringValue)"
+        cell.interes.text = item["interes"][0].stringValue
         return cell
     }
     
@@ -126,7 +128,7 @@ extension NotificacionesViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50.0
+        return 323.0
     }
     
 }

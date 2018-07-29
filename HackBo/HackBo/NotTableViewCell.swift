@@ -10,8 +10,10 @@ import UIKit
 
 class NotTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var titleLbl: UILabel!
-    @IBOutlet weak var subTitle: UILabel!
+    @IBOutlet weak var servicio: UILabel!
+    @IBOutlet weak var beneficios: UILabel!
+    @IBOutlet weak var requerimientos: UILabel!
+    @IBOutlet weak var interes: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
