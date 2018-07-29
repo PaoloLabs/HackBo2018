@@ -87,4 +87,17 @@ class Services: NSObject {
         }
     }
     
+    func updateUser(userId: String, nombre: String, celular: Int, edad: Int, ci: Int, completionHandler: @escaping (_ success: Bool, _ response: JSON) -> ()) {
+        let parameters: Parameters = [
+            "nombre": nombre,
+            "celular": celular,
+            "edad": edad,
+            "ci": ci
+        ]
+        let headers: HTTPHeaders = [ "Content-Type": "application/json"]
+        Alamofire.request("http://10.31.67.40:8000/user/updateUser/\(userId)", method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate().response(completionHandler: { (response) in
+            completionHandler(response.error == nil, JSON(response.data ?? Data()))
+        })
+    }
+    
 }
