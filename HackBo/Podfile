@@ -1,0 +1,25 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.3'
+
+target "HackBo" do
+    use_frameworks!
+    pod 'Alamofire', '~> 4.5'
+    pod 'SwiftyJSON', '~> 4.0'
+    pod 'IQKeyboardManagerSwift', '~> 5.0.0'
+    pod 'ReachabilitySwift', '~> 4.1.0'
+    pod 'Toast-Swift', '~> 3.0.1'
+    pod 'KRProgressHUD', '~> 3.1.2'
+    pod 'XLActionController', '~> 4.0.0'
+    pod 'Imaginary', '~> 3.0.3'
+    pod 'Popover', '~> 1.2.0'
+    pod 'Firebase/Core'
+    pod 'Firebase/Messaging'
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '4.0'
+    end
+  end
+end
