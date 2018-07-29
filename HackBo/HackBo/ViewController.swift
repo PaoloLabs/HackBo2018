@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,14 +31,23 @@ class ViewController: UIViewController {
         if let mail = nameTxt.text {
             KRProgressHUD.show()
             Services.sharedInstance.login(mail) { (success, response) in
-                KRProgressHUD.dismiss()
-                print("\(success) >>> \(response)")
                 if success {
-                    let data = response["data"].dictionaryValue
-                    if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController
-                    {
-                        self.present(vc, animated: true, completion: nil)
-                    }
+                    JsonData.sharedInstance.addUserData(resp: response)
+                    Services.sharedInstance.getIncomeCategory(completionHandler: { (success, income) in
+                        if success {
+                            JsonData.sharedInstance.addIncomeData(resp: income)
+                            Services.sharedInstance.getExpenseCategory(completionHandler: { (success, expense) in
+                                if success {
+                                    KRProgressHUD.dismiss()
+                                    JsonData.sharedInstance.addExpenseData(resp: expense)
+                                    if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController
+                                    {
+                                        self.present(vc, animated: true, completion: nil)
+                                    }
+                                }
+                            })
+                        }
+                    })
                 }
             }
         }

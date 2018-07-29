@@ -137,6 +137,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="addAction:" destination="fI7-VA-igq" eventType="touchUpInside" id="JWs-Xm-nx4"/>
                                     <action selector="loginMode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dj4-Oa-Pap"/>
                                 </connections>
                             </button>
@@ -147,13 +148,21 @@
                     <navigationItem key="navigationItem" title="INGRESO" id="rqh-f4-PyJ">
                         <barButtonItem key="leftBarButtonItem" image="ingreso" id="olH-ZH-6Sv">
                             <color key="tintColor" red="0.37254901960784315" green="0.74509803921568629" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="ingresoAction:" destination="fI7-VA-igq" id="pWq-QY-cTx"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="gasto" id="Fjw-Lb-YBd">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="egresoAction:" destination="fI7-VA-igq" id="8wl-q8-eaS"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="gastoItem" destination="Fjw-Lb-YBd" id="H8K-Pb-6rG"/>
+                        <outlet property="ingresoItem" destination="olH-ZH-6Sv" id="vKe-jF-77d"/>
                         <outlet property="tableView" destination="TDh-Wz-QpW" id="nex-Bn-2Nd"/>
                     </connections>
                 </viewController>

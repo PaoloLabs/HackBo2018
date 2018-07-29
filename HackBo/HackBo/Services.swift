@@ -37,7 +37,7 @@ class Services: NSObject {
     
 //    Obtener todas las transacciones por usuario id: [GET] http://10.31.67.40:8000/transaction/getTransactionByUser/<userId>
     func getTransaction(userId: String, completionHandler: @escaping (_ success: Bool, _ response: JSON) -> ()) {
-        Alamofire.request("\(serverUrl)//transaction/getTransactionByUser/\(userId)").responseJSON { (response) in
+        Alamofire.request("\(serverUrl)/transaction/getTransactionByUser/\(userId)").responseJSON { (response) in
             print("Request: \(String(describing: response.request))")   // original url request
             print("Response: \(String(describing: response.response))") // http url response
             print("Result: \(response.result)")                         // response serialization result
@@ -59,13 +59,14 @@ class Services: NSObject {
             "item": item,
             "monto": amount
         ]
-        let headers = [ "Content-Type": "application/json"]
-        Alamofire.request("\(serverUrl)/transaction/createTransaction", method: .post, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { (response) in
-            print("Request: \(String(describing: response.request))")   // original url request
-            print("Response: \(String(describing: response.response))") // http url response
-            print("Result: \(response.result)")                         // response serialization result
+        print("\(parameters)")
+        
+        let headers: HTTPHeaders = [ "Content-Type": "application/json"]
+        Alamofire.request("http://10.31.67.40:8000/transaction/createTransaction", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate().response(completionHandler: { (response) in
+            
+            print(response)
             completionHandler(response.error == nil, JSON(response.data ?? Data()))
-        }
+        })
     }
     
 //    Obtener todas las categorias de ingresos: [GET] http://10.31.67.40:8000/category/getCategoriesByType/ingreso

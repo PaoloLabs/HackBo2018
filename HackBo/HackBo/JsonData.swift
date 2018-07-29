@@ -19,4 +19,20 @@ class JsonData: NSObject {
     fileprivate override init() {
         super.init()
     }
+    
+    var userData = JSON()
+    var incomeData = JSON()
+    var expenseData = JSON()
+    
+    func addUserData(resp: JSON) {
+        self.userData = resp
+    }
+    
+    func addIncomeData(resp: JSON) {
+        self.incomeData = resp
+    }
+    
+    func addExpenseData(resp: JSON) {
+        self.expenseData = resp
+    }
 }
