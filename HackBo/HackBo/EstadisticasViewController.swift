@@ -25,50 +25,31 @@ class EstadisticasViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         
         scrollView.alwaysBounceVertical = true
-
-        let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
-        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0]
-        setChart(dataPoints: months, values: unitsSold)
         // Do any additional setup after loading the view.
         self.getStadistics()
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     func setInflowVsOutflowPieChart(data: [String], values: [Double]){
-        
-    }
-    func setInflowByCategoryChart(data: [String], values: [Double]){
-    
-    }
-    func setOutflowByCategoryChart(data: [String], values: [Double]){
-    
-    }
-
-    func setChart(dataPoints: [String], values: [Double]) {
-        
         var dataEntries: [ChartDataEntry] = []
-        
-        for i in 0..<dataPoints.count {
-            let dataEntry1 = PieChartDataEntry(value: Double(i), label: dataPoints[i], data:  dataPoints[i] as AnyObject)
+        for i in 0..<data.count {
+            let dataEntry1 = PieChartDataEntry(value: Double(values[i]), label: data[i], data:  data[i] as AnyObject)
             dataEntries.append(dataEntry1)
-            //tips en un scroll
+            print("value >>> \(Double(values[i]))")
         }
+        let pieChartDataset3 = PieChartDataSet(values: dataEntries, label: "Ingresos vs Gastos")
+        let pieChartData = PieChartData(dataSet: pieChartDataset3)
         
-        let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "Units Sold")
-        let pieChartData = PieChartData(dataSet: pieChartDataSet)
-        outflowCategory.data = pieChartData
-        inflowCategory.data = pieChartData
-        outflowCategory.data = pieChartData
+        infOutflow.data = pieChartData
         
         var colors: [UIColor] = []
-        
-        for _ in 0..<dataPoints.count {
+        for _ in 0..<data.count {
             let red = Double(arc4random_uniform(256))
             let green = Double(arc4random_uniform(256))
             let blue = Double(arc4random_uniform(256))
@@ -76,8 +57,51 @@ class EstadisticasViewController: UIViewController {
             let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
             colors.append(color)
         }
+        pieChartDataset3.colors = colors
+    }
+    func setInflowByCategoryChart(data: [String], values: [Double]){
+        var dataEntries: [ChartDataEntry] = []
+        for i in 0..<data.count {
+            let dataEntry1 = PieChartDataEntry(value: Double(values[i]), label: data[i], data:  data[i] as AnyObject)
+            dataEntries.append(dataEntry1)
+        }
+        let pieChartDataset3 = PieChartDataSet(values: dataEntries, label: "Ingresos por Categoría")
+        let pieChartData = PieChartData(dataSet: pieChartDataset3)
         
-        pieChartDataSet.colors = colors
+        inflowCategory.data = pieChartData
+        
+        var colors: [UIColor] = []
+        for _ in 0..<data.count {
+            let red = Double(arc4random_uniform(256))
+            let green = Double(arc4random_uniform(256))
+            let blue = Double(arc4random_uniform(256))
+            
+            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
+            colors.append(color)
+        }
+        pieChartDataset3.colors = colors
+    }
+    func setOutflowByCategoryChart(data: [String], values: [Double]){
+        var dataEntries: [ChartDataEntry] = []
+        for i in 0..<data.count {
+            let dataEntry1 = PieChartDataEntry(value: Double(values[i]), label: data[i], data:  data[i] as AnyObject)
+            dataEntries.append(dataEntry1)
+        }
+        let pieChartDataset3 = PieChartDataSet(values: dataEntries, label: "Ingresos por Categoría")
+        let pieChartData = PieChartData(dataSet: pieChartDataset3)
+        
+        outflowCategory.data = pieChartData
+        
+        var colors: [UIColor] = []
+        for _ in 0..<data.count {
+            let red = Double(arc4random_uniform(256))
+            let green = Double(arc4random_uniform(256))
+            let blue = Double(arc4random_uniform(256))
+            
+            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
+            colors.append(color)
+        }
+        pieChartDataset3.colors = colors
     }
     
     func getStadistics() {
@@ -89,7 +113,27 @@ class EstadisticasViewController: UIViewController {
                 print(response)
                 let ingresos = response["data"]["ingresos_porcentaje"].doubleValue
                 let gastos = response["data"]["gastos_porcentaje"].doubleValue
-                
+                let st_x = ["Ingresos","Egresos"]
+                let st_y = [ingresos,gastos]
+                self.setInflowVsOutflowPieChart(data: st_x, values: st_y)
+                //ingresos detalle
+                let ingresos_detalle = response["data"]["ingresos_detalle"].arrayValue
+                var ingresos_label: [String] = []
+                var ingresos_value: [Double] = []
+                for data in ingresos_detalle {
+                    ingresos_label.append(data["categoria"].stringValue)
+                    ingresos_value.append(data["porcentaje"].doubleValue)
+                }
+                self.setInflowByCategoryChart(data: ingresos_label, values: ingresos_value)
+                //gastos detalle
+                let gastos_detalle = response["data"]["gastos_detalle"].arrayValue
+                var gastos_label: [String] = []
+                var gastos_value: [Double] = []
+                for data in gastos_detalle {
+                    gastos_label.append(data["categoria"].stringValue)
+                    gastos_value.append(data["porcentaje"].doubleValue)
+                }
+                self.setOutflowByCategoryChart(data: gastos_label, values: gastos_value)
                 print("INGRESOS \(ingresos) >>> \(gastos)")
             }
         }
