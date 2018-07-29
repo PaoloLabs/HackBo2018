@@ -17,6 +17,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        Services.sharedInstance.login("paololabsplus@gmail.com") { (success, response) in
+            print("\(success) >>> \(response)")
+        }
+        
+        Services.sharedInstance.getIncomeCategory { (success, response) in
+            print("\(success) >>> \(response)")
+        }
+        
+        Services.sharedInstance.getExpenseCategory { (success, response) in
+            print("\(success) >>> \(response)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
