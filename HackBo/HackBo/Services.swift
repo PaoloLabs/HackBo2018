@@ -27,9 +27,6 @@ class Services: NSObject {
 //    Obtener información de usuario por email: [GET] http://10.31.67.40:8000/user/getUserByEmail/<email>
     func login(_ mail: String, completionHandler: @escaping (_ success: Bool, _ response: JSON) -> ()) {
         Alamofire.request("\(serverUrl)/user/getUserByEmail/\(mail)").responseJSON { (response) in
-            print("Request: \(String(describing: response.request))")   // original url request
-            print("Response: \(String(describing: response.response))") // http url response
-            print("Result: \(response.result)")                         // response serialization result
             completionHandler(response.error == nil, JSON(response.data ?? Data()))
             
         }
@@ -38,9 +35,6 @@ class Services: NSObject {
 //    Obtener todas las transacciones por usuario id: [GET] http://10.31.67.40:8000/transaction/getTransactionByUser/<userId>
     func getTransaction(userId: String, completionHandler: @escaping (_ success: Bool, _ response: JSON) -> ()) {
         Alamofire.request("\(serverUrl)/transaction/getTransactionByUser/\(userId)").responseJSON { (response) in
-            print("Request: \(String(describing: response.request))")   // original url request
-            print("Response: \(String(describing: response.response))") // http url response
-            print("Result: \(response.result)")                         // response serialization result
             completionHandler(response.error == nil, JSON(response.data ?? Data()))
         }
     }
@@ -59,12 +53,10 @@ class Services: NSObject {
             "item": item,
             "monto": amount
         ]
-        print("\(parameters)")
+//        print("\(parameters)")
         
         let headers: HTTPHeaders = [ "Content-Type": "application/json"]
         Alamofire.request("http://10.31.67.40:8000/transaction/createTransaction", method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate().response(completionHandler: { (response) in
-            
-            print(response)
             completionHandler(response.error == nil, JSON(response.data ?? Data()))
         })
     }
@@ -72,9 +64,6 @@ class Services: NSObject {
 //    Obtener todas las categorias de ingresos: [GET] http://10.31.67.40:8000/category/getCategoriesByType/ingreso
     func getIncomeCategory(completionHandler: @escaping (_ success: Bool, _ response: JSON) -> ()) {
         Alamofire.request("\(serverUrl)/category/getCategoriesByType/ingreso").responseJSON { (response) in
-            print("Request: \(String(describing: response.request))")   // original url request
-            print("Response: \(String(describing: response.response))") // http url response
-            print("Result: \(response.result)")                         // response serialization result
             completionHandler(response.error == nil, JSON(response.data ?? Data()))
         }
     }
@@ -82,11 +71,16 @@ class Services: NSObject {
 //    Obtener todas las categorias de gastos: [GET] http://10.31.67.40:8000/category/getCategoriesByType/gasto
     func getExpenseCategory(completionHandler: @escaping (_ success: Bool, _ response: JSON) -> ()) {
         Alamofire.request("\(serverUrl)/category/getCategoriesByType/gasto").responseJSON { (response) in
-            print("Request: \(String(describing: response.request))")   // original url request
-            print("Response: \(String(describing: response.response))") // http url response
-            print("Result: \(response.result)")                         // response serialization result
             completionHandler(response.error == nil, JSON(response.data ?? Data()))
         }
     }
+    
+    func getGraphStatistics(userId: String, completionHandler: @escaping (_ success: Bool, _ response: JSON) -> ()) {
+        Alamofire.request("http://10.31.67.40:8000/transaction/graphStatistics/\(userId)").responseJSON { (response) in
+            completionHandler(response.error == nil, JSON(response.data ?? Data()))
+        }
+    }
+    
+    
     
 }

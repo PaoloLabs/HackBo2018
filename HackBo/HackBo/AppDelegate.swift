@@ -54,14 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func showAlert() {
-        let objAlert = UIAlertController(title: "Alert", message: "Request authorization succeeded", preferredStyle: UIAlertControllerStyle.alert)
-        
-        objAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        //self.presentViewController(objAlert, animated: true, completion: nil)
-        
-        UIApplication.shared.keyWindow?.rootViewController?.present(objAlert, animated: true, completion: nil)
-    }
+    
     
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

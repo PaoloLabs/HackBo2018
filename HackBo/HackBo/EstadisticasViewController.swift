@@ -8,6 +8,8 @@
 
 import UIKit
 import Charts
+import KRProgressHUD
+import SwiftyJSON
 
 class EstadisticasViewController: UIViewController {
     @IBOutlet weak var infOutflow: PieChartView!
@@ -18,12 +20,17 @@ class EstadisticasViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 11.0/255.0, green: 43.0/255.0, blue: 88.0/255.0, alpha: 1.0)
+        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
         scrollView.alwaysBounceVertical = true
 
         let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
         let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0]
         setChart(dataPoints: months, values: unitsSold)
         // Do any additional setup after loading the view.
+        self.getStadistics()
         
     }
 
@@ -33,15 +40,6 @@ class EstadisticasViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     func setInflowVsOutflowPieChart(data: [String], values: [Double]){
         
     }
@@ -51,6 +49,7 @@ class EstadisticasViewController: UIViewController {
     func setOutflowByCategoryChart(data: [String], values: [Double]){
     
     }
+
     func setChart(dataPoints: [String], values: [Double]) {
         
         var dataEntries: [ChartDataEntry] = []
@@ -79,5 +78,20 @@ class EstadisticasViewController: UIViewController {
         }
         
         pieChartDataSet.colors = colors
+    }
+    
+    func getStadistics() {
+        KRProgressHUD.show()
+        let userId = JsonData.sharedInstance.userData["data"]["id"].stringValue
+        Services.sharedInstance.getGraphStatistics(userId: userId) { (success, response) in
+            KRProgressHUD.dismiss()
+            if success {
+                print(response)
+                let ingresos = response["data"]["ingresos_porcentaje"].doubleValue
+                let gastos = response["data"]["gastos_porcentaje"].doubleValue
+                
+                print("INGRESOS \(ingresos) >>> \(gastos)")
+            }
+        }
     }
 }
