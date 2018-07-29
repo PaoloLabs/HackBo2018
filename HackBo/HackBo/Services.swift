@@ -81,6 +81,10 @@ class Services: NSObject {
         }
     }
     
-    
+    func getStadistics(userId: String, completionHandler: @escaping (_ success: Bool, _ response: JSON) -> ()) {
+        Alamofire.request("http://10.31.67.40:8000/transaction/statistics/\(userId)").responseJSON { (response) in
+            completionHandler(response.error == nil, JSON(response.data ?? Data()))
+        }
+    }
     
 }

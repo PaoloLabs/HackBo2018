@@ -34,14 +34,22 @@ class NotificacionesViewController: UIViewController {
     }
     
     func getStadistic() {
-        KRProgressHUD.show()
-        let userId = JsonData.sharedInstance.userData["data"]["id"].stringValue
-        Services.sharedInstance.getTransaction(userId: userId) { (success, response) in
-            if success {
+        // Move to a background thread to do some long running work
+        DispatchQueue.global(qos: .userInitiated).async {
+            KRProgressHUD.show()
+            // Bounce back to the main thread to update the UI
+            let userId = JsonData.sharedInstance.userData["data"]["id"].stringValue
+            Services.sharedInstance.getStadistics(userId: userId, completionHandler: { (success, response) in
                 KRProgressHUD.dismiss()
-                self.showNotification(data: response)
-                
-            }
+                if success {
+                    DispatchQueue.main.async {
+                        self.showNotification(data: response)
+                        JsonData.sharedInstance.notificationArray = response
+                        self.updateList()
+                        
+                    }
+                }
+            })
         }
     }
     
@@ -54,7 +62,6 @@ class NotificacionesViewController: UIViewController {
                 print("Request authorization failed!")
             } else {
                 print("Request authorization succeeded!")
-                self.showAlert()
             }
         }
         
@@ -76,8 +83,6 @@ class NotificacionesViewController: UIViewController {
         
         //adding the notification to notification center
         UNUserNotificationCenter.current().add(request) { (error) in
-            print("error >>> \(error)")
-            
         }
 
     }
@@ -103,12 +108,13 @@ extension NotificacionesViewController: UITableViewDelegate, UITableViewDataSour
         let item = self.arrayNotification[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotTableViewCell") as! NotTableViewCell
         cell.titleLbl.text = item["servicio"].stringValue
+        cell.subTitle.text = item["descripcion"].stringValue
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = self.arrayNotification[indexPath.row]
-         
+        
+        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -120,7 +126,7 @@ extension NotificacionesViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80.0
+        return 50.0
     }
     
 }

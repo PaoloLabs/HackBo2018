@@ -25,6 +25,7 @@
 		52C2BC94210E1A4500BA5CE5 /* NotificacionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2BC93210E1A4500BA5CE5 /* NotificacionesViewController.swift */; };
 		52C2BC9B210E1C4600BA5CE5 /* NotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2BC99210E1C4600BA5CE5 /* NotTableViewCell.swift */; };
 		52C2BC9C210E1C4600BA5CE5 /* NotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C2BC9A210E1C4600BA5CE5 /* NotTableViewCell.xib */; };
+		52C2BC9E210E383400BA5CE5 /* Default-667h.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C2BC9D210E383300BA5CE5 /* Default-667h.png */; };
 		555C0D12967A46B53094B942 /* Pods_HackBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFBB433973F7E9EE21FD167 /* Pods_HackBo.framework */; };
 		EC249192210DABEE000018EA /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC249190210DABEE000018EA /* TransactionTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		52C2BC93210E1A4500BA5CE5 /* NotificacionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificacionesViewController.swift; sourceTree = "<group>"; };
 		52C2BC99210E1C4600BA5CE5 /* NotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotTableViewCell.swift; sourceTree = "<group>"; };
 		52C2BC9A210E1C4600BA5CE5 /* NotTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotTableViewCell.xib; sourceTree = "<group>"; };
+		52C2BC9D210E383300BA5CE5 /* Default-667h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h.png"; sourceTree = "<group>"; };
 		9AA78C88276608EB30A62D9F /* Pods-HackBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackBo/Pods-HackBo.debug.xcconfig"; sourceTree = "<group>"; };
 		CC371CEB4BC2963D3D047337 /* Pods-HackBo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackBo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackBo/Pods-HackBo.release.xcconfig"; sourceTree = "<group>"; };
 		DDFBB433973F7E9EE21FD167 /* Pods_HackBo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackBo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +148,7 @@
 				52ACBDC7210DED91009D1434 /* FieldTableViewCell.swift */,
 				52ACBDC8210DED91009D1434 /* FieldTableViewCell.xib */,
 				52B441AA210D3504002F6779 /* LaunchScreen.storyboard */,
+				52C2BC9D210E383300BA5CE5 /* Default-667h.png */,
 				52B441AD210D3504002F6779 /* Info.plist */,
 				5253FF86210D7F850042977A /* GoogleService-Info.plist */,
 				EC24918F210DABEE000018EA /* TransactionTableViewCell.swift */,
@@ -300,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C2BC9E210E383400BA5CE5 /* Default-667h.png in Resources */,
 				EC249192210DABEE000018EA /* TransactionTableViewCell.xib in Resources */,
 				52B441AC210D3504002F6779 /* LaunchScreen.storyboard in Resources */,
 				52ACBDCA210DED91009D1434 /* FieldTableViewCell.xib in Resources */,
