@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>648073884047-sueqj13tds3ghg2ouuos071tn1edb6bl.apps.googleusercontent.com</string>
+	<string>648073884047-s0er3qgf0d3fm4c0f3ou59n7ged6ogfa.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.648073884047-sueqj13tds3ghg2ouuos071tn1edb6bl</string>
+	<string>com.googleusercontent.apps.648073884047-s0er3qgf0d3fm4c0f3ou59n7ged6ogfa</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDTD_un8ZeqyoP2Mgk_JI3fEGGlrdaeR8o</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.paololabs.HackBo</string>
+	<string>tslReader.com</string>
 	<key>PROJECT_ID</key>
 	<string>hackbo2018-9d0bc</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:648073884047:ios:9d868fb246a22a56</string>
+	<string>1:648073884047:ios:2362d1951756848e</string>
 	<key>DATABASE_URL</key>
 	<string>https://hackbo2018-9d0bc.firebaseio.com</string>
 </dict>

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5253FF85210D75BE0042977A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5253FF84210D75BD0042977A /* GoogleService-Info.plist */; };
+		5253FF87210D7F860042977A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5253FF86210D7F850042977A /* GoogleService-Info.plist */; };
 		52B441A2210D3503002F6779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B441A1210D3503002F6779 /* AppDelegate.swift */; };
 		52B441A4210D3503002F6779 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B441A3210D3503002F6779 /* ViewController.swift */; };
 		52B441A7210D3503002F6779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B441A5210D3503002F6779 /* Main.storyboard */; };
@@ -36,7 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5253FF84210D75BD0042977A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5253FF86210D7F850042977A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5253FF88210D870A0042977A /* HackBo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HackBo.entitlements; sourceTree = "<group>"; };
 		52B4419E210D3503002F6779 /* HackBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B441A1210D3503002F6779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B441A3210D3503002F6779 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,13 +107,14 @@
 		52B441A0210D3503002F6779 /* HackBo */ = {
 			isa = PBXGroup;
 			children = (
+				5253FF88210D870A0042977A /* HackBo.entitlements */,
 				52B441A1210D3503002F6779 /* AppDelegate.swift */,
 				52B441A3210D3503002F6779 /* ViewController.swift */,
 				52B441A5210D3503002F6779 /* Main.storyboard */,
 				52B441A8210D3504002F6779 /* Assets.xcassets */,
 				52B441AA210D3504002F6779 /* LaunchScreen.storyboard */,
 				52B441AD210D3504002F6779 /* Info.plist */,
-				5253FF84210D75BD0042977A /* GoogleService-Info.plist */,
+				5253FF86210D7F850042977A /* GoogleService-Info.plist */,
 			);
 			path = HackBo;
 			sourceTree = "<group>";
@@ -222,6 +224,11 @@
 				TargetAttributes = {
 					52B4419D210D3503002F6779 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					52B441B1210D3504002F6779 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -259,7 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B441AC210D3504002F6779 /* LaunchScreen.storyboard in Resources */,
-				5253FF85210D75BE0042977A /* GoogleService-Info.plist in Resources */,
+				5253FF87210D7F860042977A /* GoogleService-Info.plist in Resources */,
 				52B441A9210D3504002F6779 /* Assets.xcassets in Resources */,
 				52B441A7210D3503002F6779 /* Main.storyboard in Resources */,
 			);
@@ -309,6 +316,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-HackBo/Pods-HackBo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Cache/Cache.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/ChartsRealm/ChartsRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Imaginary/Imaginary.framework",
@@ -317,6 +326,8 @@
 				"${BUILT_PRODUCTS_DIR}/Popover/Popover.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/XLActionController/XLActionController.framework",
@@ -326,6 +337,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChartsRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Imaginary.framework",
@@ -334,6 +347,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Popover.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLActionController.framework",
@@ -526,14 +541,12 @@
 			baseConfigurationReference = 9AA78C88276608EB30A62D9F /* Pods-HackBo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HackBo/HackBo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JE84MEW26F;
 				INFOPLIST_FILE = HackBo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.paololabs.HackBo;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HackBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -545,14 +558,12 @@
 			baseConfigurationReference = CC371CEB4BC2963D3D047337 /* Pods-HackBo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HackBo/HackBo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JE84MEW26F;
 				INFOPLIST_FILE = HackBo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.paololabs.HackBo;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HackBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -567,11 +578,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JE84MEW26F;
 				INFOPLIST_FILE = HackBoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paololabs.HackBoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -588,11 +595,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JE84MEW26F;
 				INFOPLIST_FILE = HackBoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paololabs.HackBoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -608,11 +611,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JE84MEW26F;
 				INFOPLIST_FILE = HackBoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paololabs.HackBoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -628,11 +627,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JE84MEW26F;
 				INFOPLIST_FILE = HackBoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paololabs.HackBoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

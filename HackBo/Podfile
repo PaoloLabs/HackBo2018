@@ -14,6 +14,10 @@ target "HackBo" do
     pod 'Popover', '~> 1.2.0'
     pod 'Firebase/Core'
     pod 'Firebase/Messaging'
+    pod 'Charts'
+    pod 'ChartsRealm'
+
+    
 end
 
 post_install do |installer|
