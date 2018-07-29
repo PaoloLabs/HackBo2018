@@ -10,10 +10,16 @@ import UIKit
 import Charts
 
 class EstadisticasViewController: UIViewController {
-    @IBOutlet weak var pieChartView: PieChartView!
+    @IBOutlet weak var infOutflow: PieChartView!
+    @IBOutlet weak var inflowCategory: PieChartView!
+    @IBOutlet weak var outflowCategory: PieChartView!
+    @IBOutlet weak var scrollView: UIScrollView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.alwaysBounceVertical = true
+
         let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
         let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0]
         setChart(dataPoints: months, values: unitsSold)
@@ -36,6 +42,15 @@ class EstadisticasViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func setInflowVsOutflowPieChart(data: [String], values: [Double]){
+        
+    }
+    func setInflowByCategoryChart(data: [String], values: [Double]){
+    
+    }
+    func setOutflowByCategoryChart(data: [String], values: [Double]){
+    
+    }
     func setChart(dataPoints: [String], values: [Double]) {
         
         var dataEntries: [ChartDataEntry] = []
@@ -48,7 +63,9 @@ class EstadisticasViewController: UIViewController {
         
         let pieChartDataSet = PieChartDataSet(values: dataEntries, label: "Units Sold")
         let pieChartData = PieChartData(dataSet: pieChartDataSet)
-        pieChartView.data = pieChartData
+        outflowCategory.data = pieChartData
+        inflowCategory.data = pieChartData
+        outflowCategory.data = pieChartData
         
         var colors: [UIColor] = []
         

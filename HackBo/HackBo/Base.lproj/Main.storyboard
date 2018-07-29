@@ -178,48 +178,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0N3-dg-s0S" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="67" y="67" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ogd-Zf-hyw">
-                                <rect key="frame" x="0.0" y="315" width="375" height="303"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aud-cN-YlZ">
-                                    <size key="itemSize" width="375" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ajV-gx-bv9">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptT-OW-8TS">
-                                                    <rect key="frame" x="4" y="14" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3R-Gv-fCh">
+                                <rect key="frame" x="0.0" y="24" width="375" height="594"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpQ-dN-lYN" customClass="PieChartView" customModule="Charts">
+                                        <rect key="frame" x="67" y="0.0" width="240" height="240"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="NyK-rw-5GW"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iM2-11-SAl" customClass="PieChartView" customModule="Charts">
+                                        <rect key="frame" x="67" y="239" width="240" height="240"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="2ZV-Cw-gLq"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M0j-te-88B" customClass="PieChartView" customModule="Charts">
+                                        <rect key="frame" x="67" y="487" width="240" height="240"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="sHS-Kx-FsD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="kpQ-dN-lYN" secondAttribute="trailing" constant="68" id="4ld-1f-PKv"/>
+                                    <constraint firstItem="kpQ-dN-lYN" firstAttribute="top" secondItem="V3R-Gv-fCh" secondAttribute="top" id="Sj4-Ni-iIU"/>
+                                    <constraint firstItem="kpQ-dN-lYN" firstAttribute="leading" secondItem="V3R-Gv-fCh" secondAttribute="leading" constant="67" id="np1-nx-3v9"/>
+                                    <constraint firstItem="kpQ-dN-lYN" firstAttribute="centerX" secondItem="V3R-Gv-fCh" secondAttribute="centerX" id="ohF-gk-7Vb"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="V3R-Gv-fCh" firstAttribute="bottom" secondItem="Day-dQ-ohb" secondAttribute="bottom" id="2DF-hV-ucj"/>
+                            <constraint firstItem="V3R-Gv-fCh" firstAttribute="top" secondItem="Day-dQ-ohb" secondAttribute="top" constant="4" id="7lD-Jq-A9F"/>
+                            <constraint firstItem="V3R-Gv-fCh" firstAttribute="leading" secondItem="B8R-uN-D14" secondAttribute="leading" id="cte-pj-ONq"/>
+                            <constraint firstAttribute="trailing" secondItem="V3R-Gv-fCh" secondAttribute="trailing" id="vlM-qf-qfw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Day-dQ-ohb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Estadisticas" image="stadistics" id="R5v-Eu-D7F"/>
                     <connections>
-                        <outlet property="pieChartView" destination="0N3-dg-s0S" id="gwZ-ge-cX9"/>
+                        <outlet property="infOutflow" destination="M0j-te-88B" id="ju7-9f-Xkw"/>
+                        <outlet property="inflowCategory" destination="iM2-11-SAl" id="yiD-h5-og8"/>
+                        <outlet property="outflowCategory" destination="kpQ-dN-lYN" id="CgV-0e-6vb"/>
+                        <outlet property="scrollView" destination="V3R-Gv-fCh" id="k3e-xa-mHw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sg4-1j-SkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
