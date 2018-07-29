@@ -23,6 +23,7 @@ class JsonData: NSObject {
     var userData = JSON()
     var incomeData = JSON()
     var expenseData = JSON()
+    var notificationArray = JSON()
     
     func addUserData(resp: JSON) {
         self.userData = resp

@@ -11,8 +11,7 @@ import Charts
 
 class EstadisticasViewController: UIViewController {
     @IBOutlet weak var pieChartView: PieChartView!
-    var scrollView: UIScrollView
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]

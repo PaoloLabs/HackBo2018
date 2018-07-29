@@ -33,7 +33,6 @@ class OverviewViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: "FieldTableViewCell", bundle: nil), forCellReuseIdentifier: "FieldTableViewCell")
         self.categoryArray = JsonData.sharedInstance.incomeData["data"].arrayValue
-        print("USER >>> \(JsonData.sharedInstance.userData)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,8 +89,9 @@ class OverviewViewController: UIViewController {
         Services.sharedInstance.newTransaction(userId: userId, catId: categoriaId, item: item, amount: monto) { (success, response) in
             KRProgressHUD.dismiss()
             if success {
-                print(response)
-                self.tableView.reloadData()
+                self.itemCell.field.text = ""
+                self.categoryCell.field.text = ""
+                self.montoCell.field.text = ""
             }
         }
     }
