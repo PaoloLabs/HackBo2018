@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5253FF85210D75BE0042977A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5253FF84210D75BD0042977A /* GoogleService-Info.plist */; };
 		52B441A2210D3503002F6779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B441A1210D3503002F6779 /* AppDelegate.swift */; };
 		52B441A4210D3503002F6779 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B441A3210D3503002F6779 /* ViewController.swift */; };
 		52B441A7210D3503002F6779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B441A5210D3503002F6779 /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		52B441AC210D3504002F6779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B441AA210D3504002F6779 /* LaunchScreen.storyboard */; };
 		52B441B7210D3504002F6779 /* HackBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B441B6210D3504002F6779 /* HackBoTests.swift */; };
 		52B441C2210D3504002F6779 /* HackBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B441C1210D3504002F6779 /* HackBoUITests.swift */; };
+		555C0D12967A46B53094B942 /* Pods_HackBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFBB433973F7E9EE21FD167 /* Pods_HackBo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5253FF84210D75BD0042977A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52B4419E210D3503002F6779 /* HackBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B441A1210D3503002F6779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B441A3210D3503002F6779 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		52B441BD210D3504002F6779 /* HackBoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackBoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B441C1210D3504002F6779 /* HackBoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackBoUITests.swift; sourceTree = "<group>"; };
 		52B441C3210D3504002F6779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AA78C88276608EB30A62D9F /* Pods-HackBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackBo/Pods-HackBo.debug.xcconfig"; sourceTree = "<group>"; };
+		CC371CEB4BC2963D3D047337 /* Pods-HackBo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackBo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackBo/Pods-HackBo.release.xcconfig"; sourceTree = "<group>"; };
+		DDFBB433973F7E9EE21FD167 /* Pods_HackBo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackBo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555C0D12967A46B53094B942 /* Pods_HackBo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,8 @@
 				52B441B5210D3504002F6779 /* HackBoTests */,
 				52B441C0210D3504002F6779 /* HackBoUITests */,
 				52B4419F210D3503002F6779 /* Products */,
+				CFD7454D0E023FB1CF971D33 /* Pods */,
+				FB2B82D50A241DA6FF828540 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +112,7 @@
 				52B441A8210D3504002F6779 /* Assets.xcassets */,
 				52B441AA210D3504002F6779 /* LaunchScreen.storyboard */,
 				52B441AD210D3504002F6779 /* Info.plist */,
+				5253FF84210D75BD0042977A /* GoogleService-Info.plist */,
 			);
 			path = HackBo;
 			sourceTree = "<group>";
@@ -125,6 +135,23 @@
 			path = HackBoUITests;
 			sourceTree = "<group>";
 		};
+		CFD7454D0E023FB1CF971D33 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9AA78C88276608EB30A62D9F /* Pods-HackBo.debug.xcconfig */,
+				CC371CEB4BC2963D3D047337 /* Pods-HackBo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FB2B82D50A241DA6FF828540 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDFBB433973F7E9EE21FD167 /* Pods_HackBo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52B441C6210D3504002F6779 /* Build configuration list for PBXNativeTarget "HackBo" */;
 			buildPhases = (
+				434AE029E926D76431EBD04D /* [CP] Check Pods Manifest.lock */,
 				52B4419A210D3503002F6779 /* Sources */,
 				52B4419B210D3503002F6779 /* Frameworks */,
 				52B4419C210D3503002F6779 /* Resources */,
+				B5B6DFDFFF7C46A2AFBAC17B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B441AC210D3504002F6779 /* LaunchScreen.storyboard in Resources */,
+				5253FF85210D75BE0042977A /* GoogleService-Info.plist in Resources */,
 				52B441A9210D3504002F6779 /* Assets.xcassets in Resources */,
 				52B441A7210D3503002F6779 /* Main.storyboard in Resources */,
 			);
@@ -250,6 +280,71 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		434AE029E926D76431EBD04D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HackBo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5B6DFDFFF7C46A2AFBAC17B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HackBo/Pods-HackBo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cache/Cache.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Imaginary/Imaginary.framework",
+				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Popover/Popover.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/XLActionController/XLActionController.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Imaginary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Popover.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLActionController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackBo/Pods-HackBo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52B4419A210D3503002F6779 /* Sources */ = {
@@ -428,6 +523,7 @@
 		};
 		52B441C7210D3504002F6779 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AA78C88276608EB30A62D9F /* Pods-HackBo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +542,7 @@
 		};
 		52B441C8210D3504002F6779 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC371CEB4BC2963D3D047337 /* Pods-HackBo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
