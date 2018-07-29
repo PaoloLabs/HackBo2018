@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		5253FF87210D7F860042977A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5253FF86210D7F850042977A /* GoogleService-Info.plist */; };
 		52ACBDC2210DA6BE009D1434 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACBDC1210DA6BE009D1434 /* Services.swift */; };
+		52ACBDC4210DC908009D1434 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACBDC3210DC908009D1434 /* TabBarViewController.swift */; };
+		52ACBDC6210DCD26009D1434 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACBDC5210DCD26009D1434 /* OverviewViewController.swift */; };
+		52ACBDC9210DED91009D1434 /* FieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACBDC7210DED91009D1434 /* FieldTableViewCell.swift */; };
+		52ACBDCA210DED91009D1434 /* FieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52ACBDC8210DED91009D1434 /* FieldTableViewCell.xib */; };
 		52B441A2210D3503002F6779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B441A1210D3503002F6779 /* AppDelegate.swift */; };
 		52B441A4210D3503002F6779 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B441A3210D3503002F6779 /* ViewController.swift */; };
 		52B441A7210D3503002F6779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B441A5210D3503002F6779 /* Main.storyboard */; };
@@ -17,7 +21,6 @@
 		52B441B7210D3504002F6779 /* HackBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B441B6210D3504002F6779 /* HackBoTests.swift */; };
 		52B441C2210D3504002F6779 /* HackBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B441C1210D3504002F6779 /* HackBoUITests.swift */; };
 		555C0D12967A46B53094B942 /* Pods_HackBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDFBB433973F7E9EE21FD167 /* Pods_HackBo.framework */; };
-		EC249191210DABEE000018EA /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24918F210DABEE000018EA /* TransactionTableViewCell.swift */; };
 		EC249192210DABEE000018EA /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC249190210DABEE000018EA /* TransactionTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +45,10 @@
 		5253FF86210D7F850042977A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5253FF88210D870A0042977A /* HackBo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HackBo.entitlements; sourceTree = "<group>"; };
 		52ACBDC1210DA6BE009D1434 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		52ACBDC3210DC908009D1434 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		52ACBDC5210DCD26009D1434 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		52ACBDC7210DED91009D1434 /* FieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTableViewCell.swift; sourceTree = "<group>"; };
+		52ACBDC8210DED91009D1434 /* FieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FieldTableViewCell.xib; sourceTree = "<group>"; };
 		52B4419E210D3503002F6779 /* HackBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B441A1210D3503002F6779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B441A3210D3503002F6779 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,7 +125,11 @@
 				52B441A3210D3503002F6779 /* ViewController.swift */,
 				52ACBDC1210DA6BE009D1434 /* Services.swift */,
 				52B441A5210D3503002F6779 /* Main.storyboard */,
+				52ACBDC3210DC908009D1434 /* TabBarViewController.swift */,
 				52B441A8210D3504002F6779 /* Assets.xcassets */,
+				52ACBDC5210DCD26009D1434 /* OverviewViewController.swift */,
+				52ACBDC7210DED91009D1434 /* FieldTableViewCell.swift */,
+				52ACBDC8210DED91009D1434 /* FieldTableViewCell.xib */,
 				52B441AA210D3504002F6779 /* LaunchScreen.storyboard */,
 				52B441AD210D3504002F6779 /* Info.plist */,
 				5253FF86210D7F850042977A /* GoogleService-Info.plist */,
@@ -276,6 +287,7 @@
 			files = (
 				EC249192210DABEE000018EA /* TransactionTableViewCell.xib in Resources */,
 				52B441AC210D3504002F6779 /* LaunchScreen.storyboard in Resources */,
+				52ACBDCA210DED91009D1434 /* FieldTableViewCell.xib in Resources */,
 				5253FF87210D7F860042977A /* GoogleService-Info.plist in Resources */,
 				52B441A9210D3504002F6779 /* Assets.xcassets in Resources */,
 				52B441A7210D3503002F6779 /* Main.storyboard in Resources */,
@@ -376,7 +388,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52ACBDC4210DC908009D1434 /* TabBarViewController.swift in Sources */,
 				52B441A4210D3503002F6779 /* ViewController.swift in Sources */,
+				52ACBDC9210DED91009D1434 /* FieldTableViewCell.swift in Sources */,
+				52ACBDC6210DCD26009D1434 /* OverviewViewController.swift in Sources */,
 				52ACBDC2210DA6BE009D1434 /* Services.swift in Sources */,
 				52B441A2210D3503002F6779 /* AppDelegate.swift in Sources */,
 			);

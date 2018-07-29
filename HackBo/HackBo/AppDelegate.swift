@@ -19,36 +19,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         IQKeyboardManager.sharedManager().enable = true
         
-        // Override point for customization after application launch.
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
-            // Enable or disable features based on authorization.
-            if error != nil {
-                print("Request authorization failed!")
-            } else {
-                print("Request authorization succeeded!")
-                self.showAlert()
-            }
-        }
+//        // Override point for customization after application launch.
+//        let center = UNUserNotificationCenter.current()
+//        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+//            // Enable or disable features based on authorization.
+//            if error != nil {
+//                print("Request authorization failed!")
+//            } else {
+//                print("Request authorization succeeded!")
+//                self.showAlert()
+//            }
+//        }
         
-        //creating the notification content
-        let content = UNMutableNotificationContent()
-        
-        //adding title, subtitle, body and badge
-        content.title = "Hey this is Simplified iOS"
-        content.subtitle = "iOS Development is fun"
-        content.body = "We are learning about iOS Local Notification"
-        content.badge = 1
-        
-        //getting the notification trigger
-        //it will be called after 5 seconds
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: false)
-        
-        //getting the notification request
-        let request = UNNotificationRequest(identifier: "SimplifiedIOSNotification", content: content, trigger: trigger)
-        
-        //adding the notification to notification center
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+//        //creating the notification content
+//        let content = UNMutableNotificationContent()
+//
+//        //adding title, subtitle, body and badge
+//        content.title = "Hey this is Simplified iOS"
+//        content.subtitle = "iOS Development is fun"
+//        content.body = "We are learning about iOS Local Notification"
+//        content.badge = 1
+//
+//        //getting the notification trigger
+//        //it will be called after 5 seconds
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: false)
+//
+//        //getting the notification request
+//        let request = UNNotificationRequest(identifier: "SimplifiedIOSNotification", content: content, trigger: trigger)
+//
+//        //adding the notification to notification center
+//        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         
         
         return true
